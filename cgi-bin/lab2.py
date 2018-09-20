@@ -5,6 +5,7 @@ sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 sys.stdin = codecs.getreader("utf-8")(sys.stdin.detach())
 
 import st00.main
+import st06.main
 
 
 #	добавить импорт своего модуля по шаблону
@@ -13,6 +14,7 @@ import st00.main
 
 MENU = [
 	["[00] Образец", st00.main.main],
+	["[06] Василюк", st06.main.main],
 
 #		добавить пункт меню для вызова своей главной функции по шаблону:
 #		["[<номер по журналу>] <Фамилия>", <ссылка на функцию>],
