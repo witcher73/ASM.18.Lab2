@@ -24,44 +24,66 @@ methods = [g.addPerson, g.addStudent, editMember, deleteMember, g.saveToFile, g.
 actions = { "delete": deleteMember, "add": addPerson }
 
 def printHead():
-    print ("Content-type: text/html; charset=utf-8\n\n")
-    print("<style>")
-    print(".brd {border: 1px solid black; overflow:hidden; background-color: #EEE; width: 300px; padding: 5px; margin-top: 5px;}")
-    print(".btn {float: right;}")
-    print("input {margin: 2px; width: 70px;}")
-    print("select {margin: 2px; width: 70px;}")
-    print("form {width: 300px}")
-    print("</style>")   
+    print ("""Content-type: text/html; charset=utf-8\n\n
+    <style>
+        .brd {
+                border: 1px solid black; 
+                overflow:hidden; 
+                background-color: #EEE; 
+                width: 300px; 
+                padding: 5px; 
+                margin-top: 5px;
+            }
+        .btn {
+                float: right;
+            }
+        input {
+                margin: 2px; 
+                width: 70px;
+            }
+        select {
+                margin: 2px; 
+                width: 70px;
+            }
+        form {
+            width: 300px
+            }
+    </style>""")   
 
 def printContent(q, selfurl):        
     print("<form action='{0}' method='get'>".format(selfurl))
     print("<input type='hidden' name='student' value={0}></a>".format(q['student'].value))
     print("<input type='hidden' name='action' value='add'></a>".format(q['student'].value))
     
-    print("<select id='type' name='type' onchange='onChange()'><option value='person'>Person</option><option value='student'>Student</option></select>")
+    print("""
+          <select id='type' name='type' onchange='onChange()'>
+              <option value='person'>Person</option>
+              <option value='student'>Student</option>
+          </select>""")
     print("<br>")
     
-    print("<input placeholder='Name' name='name'>")
-    print("<input placeholder='Age' name='age'>")
-    print("<input type='submit' value='Add'>")
-    print("<br>")
-    print("<input placeholder='Course' class='forst' name='course' style='visibility: hidden'>")
-    print("<input placeholder='Faculty' class='forst' name='faculty' style='visibility: hidden'>")
-    print("<br>")
-    print("</form>")
+    print("""
+          <input placeholder='Name' name='name'>
+          <input placeholder='Age' name='age'>
+          <input type='submit' value='Add'>
+          <br>
+          <input placeholder='Course' class='forst' name='course' style='visibility: hidden'>
+          <input placeholder='Faculty' class='forst' name='faculty' style='visibility: hidden'>
+          <br>
+          </form>""")
 
-    print("<script type='text/javascript'>")
-    print("function onChange() {")
-    print("var type = document.getElementById('type').value;")
-    print("if (type == 'person') {")
-    print("	document.getElementsByClassName('forst')[0].style.visibility = 'hidden';")
-    print("	document.getElementsByClassName('forst')[1].style.visibility = 'hidden';")
-    print("} else {")
-    print("	document.getElementsByClassName('forst')[0].style.visibility = 'visible';")
-    print("	document.getElementsByClassName('forst')[1].style.visibility = 'visible';")
-    print("}")
-    print("}")
-    print("</script>")
+    print("""<script type='text/javascript'>
+    function onChange() {
+        var type = document.getElementById('type').value;
+        if (type == 'person') {
+        	document.getElementsByClassName('forst')[0].style.visibility = 'hidden';
+        	document.getElementsByClassName('forst')[1].style.visibility = 'hidden';
+        } else {
+        	document.getElementsByClassName('forst')[0].style.visibility = 'visible';
+        	document.getElementsByClassName('forst')[1].style.visibility = 'visible';
+        }
+    }
+    </script>""")
             
     members = g.getMembers()
     for i, m in enumerate(members):
