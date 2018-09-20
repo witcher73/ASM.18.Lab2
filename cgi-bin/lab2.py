@@ -1,4 +1,4 @@
-﻿import cgi, cgitb, os, sys, codecs
+import cgi, cgitb, os, sys, codecs
 
 cgitb.enable()
 sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
@@ -7,6 +7,7 @@ sys.stdin = codecs.getreader("utf-8")(sys.stdin.detach())
 import st00.main
 import st06.main
 import st41.main
+import st34.main
 
 
 #	добавить импорт своего модуля по шаблону
@@ -16,7 +17,7 @@ import st41.main
 MENU = [
 	["[00] Образец", st00.main.main],
 	["[06] Василюк", st06.main.main],
-
+    ["[34] Сурков", st34.main.main],
 	["[41] Шнякин", st41.main.main],
 #		добавить пункт меню для вызова своей главной функции по шаблону:
 #		["[<номер по журналу>] <Фамилия>", <ссылка на функцию>],
