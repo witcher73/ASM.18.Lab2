@@ -105,11 +105,11 @@ class Content:
         self.print()
     
     def writefile(self):
-        with open('file','wb') as fich:
+        with open('cgi-bin/st46/file','wb') as fich:
             pickle.dump(self.list,fich)
         
     def readfile(self):
-        with open('file','rb') as fich:
+        with open('cgi-bin/st46/file','rb') as fich:
             self.list=pickle.load(fich)
       
 
