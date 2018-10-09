@@ -1,4 +1,4 @@
-import cgi, cgitb, os, sys, codecs
+﻿import cgi, cgitb, os, sys, codecs
 
 cgitb.enable()
 sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
@@ -15,6 +15,7 @@ import st41.main
 import st23.main
 import st08.main
 import st46.main
+import st32.main
 
 #	добавить импорт своего модуля по шаблону
 #	import st<номер по журналу>.main
@@ -32,6 +33,7 @@ MENU = [
 	["[08] Винокуров", st08.main.main],
         ["[46] Соанху", st46.main.main],
         ["[28] Рамазанов", st28.main.main],
+        ["[32] Сазонов", st32.main.main],
 	
 
 #		добавить пункт меню для вызова своей главной функции по шаблону:

@@ -1,0 +1,44 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Sep 22 15:54:35 2018
+
+@author: Владимир
+"""
+
+import pickle
+from truck import truck
+from truck_driver import truck_driver
+
+class autopark:
+    def __init__(self):
+        self.list_of_autopark = []
+    
+    def add_empty_truck(self):
+        self.list_of_autopark.append(truck())
+   
+    def add_truck_with_driver(self):
+        self.list_of_autopark.append(truck_driver())
+   
+    def clear_all(self):
+        self.list_of_autopark.clear()
+        print("Autopark is empty now")
+    
+    def present_autopark(self):
+        print("\nList of Autopark: \n")
+        for i in self.list_of_autopark:
+            print("Truck number {}".format(self.company.index(i)+1))
+            i.show()
+        if len(self.list_of_autopark) == 0:
+            print("Autopark is empty now")
+            
+    def select_from_file(self):
+        with open("./st32/filename.txt", 'rb') as filename:
+            self.list_of_autopark = pickle.load(filename)
+            
+    def insert_into_file(self):
+         with open("./s32/filename.txt", 'rb') as filename:
+            pickle.dump(self.list_of_autopark, filename)
+            
+
+    
+                    
