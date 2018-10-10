@@ -1,0 +1,35 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Sep 22 15:27:06 2018
+
+@author: Владимир
+"""
+
+from .autopark import autopark
+
+auto_park = autopark()
+
+menu_list = [
+                ["1 - Add an empty truck", auto_park.add_empty_truck ],
+                ["2 - Add truck with driver", auto_park.add_truck_with_driver],
+                ["3 - Present autopark", auto_park.present_autopark ],
+                ["4 - Clear all autopark", auto_park.clear_all ],
+                ["5 - Edit item"  ],
+                ["6 - Delete one item"  ],
+                ["7 - Insert data into file", auto_park.insert_into_file ],
+                ["8 - Select data from file", auto_park.select_from_file ],
+                ["9 - Exit"  ],
+            ]
+
+def menu():
+	print("------------------------------")
+	for i, item in enumerate(menu_list):
+		print("{0:2}. {1}".format(i, item[0]))
+	print("------------------------------")
+	return int(input())
+
+try:
+	while True:
+		menu_list[menu()][1]()
+except Exception as ex:
+	print(ex, "\nbye")
