@@ -9,6 +9,7 @@ import st03.main
 import st04.main
 import st06.main
 import st10.main
+import st12.main
 import st13.main
 import st19.main
 import st26.main
@@ -36,6 +37,7 @@ MENU = [
 	["[06] Василюк", st06.main.main],
     ["[08] Винокуров", st08.main.main],
     ["[10] Гордиенко", st10.main.main],
+    ["[12] Деордице В", st12.main.main],
     ["[13] Деордице Д", st13.main.main],
 	["[15] Казак", st15.main.main],
     ["[19] Левочко", st19.main.main],
