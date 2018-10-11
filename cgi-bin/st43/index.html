@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Laba 2</title>
+<style>
+	button.add_worker {
+	color: #fff; 
+	background: #FFA500; 
+	padding: 14px; 
+	border-radius: 5px;
+	border: 4px solid #FF8247;
+        font-size:1.4vw
+	} 
+	button.add_worker:hover { 
+	background: #FF6347; 
+	}
+</style>
+<style>
+	button.add_boss {
+	color: #fff; 
+	background: #61ccff; 
+	padding: 14px; 
+	border-radius: 5px;
+	border: 4px solid #14b4ff;
+        font-size:1.4vw
+	} 
+	button.add_boss:hover { 
+	background: #00a9fa; 
+	}
+</style>
+<style>
+	button.output {
+	color: #fff; 
+	background: #00f84f; 
+	padding: 14px; 
+	border-radius: 5px;
+	border: 4px solid #00d043;
+        font-size:1.4vw
+	} 
+	button.output:hover { 
+	background: #00a936; 
+	}
+</style>
+<style>
+	button.write {
+	color: #fff; 
+	background: #ff95dd; 
+	padding: 14px; 
+	border-radius: 5px;
+	border: 4px solid #ff5bca;
+        font-size:1.4vw
+	} 
+	button.write:hover { 
+	background: #ff47c4; 
+	}
+</style>
+<style>
+	button.read {
+	color: #fff; 
+	background: #bd0081; 
+	padding: 14px; 
+	border-radius: 5px;
+	border: 4px solid #960066;
+        font-size:1.4vw
+	} 
+	button.read:hover { 
+	background: #820059; 
+	}
+</style>
+<style>
+	button.clear {
+	color: #fff; 
+	background: #fbea83; 
+	padding: 14px; 
+	border-radius: 5px;
+	border: 4px solid #f9d81f;
+        font-size:1.4vw
+	} 
+	button.clear:hover { 
+	background: #f7d407; 
+	}
+</style>
+<style>
+.ctext {
+    width: 200px; /* Ширина поля с учетом padding */
+    height: 46px; /* Высота */
+    background: #dad7c5 url(images/input.png) no-repeat; /* Фон */
+    padding: 0 10px; /* Поля */
+    border: none; /* Убираем рамку */
+    font-size: 1.25em; /* Размер текста */
+    line-height: 46px; /* Выравниваем по  центру в IE */
+   }
+</style>
+</head>
+<body>
+    <form action="/cgi-bin/form.py">
+
+        <FONT SIZE=5 color=blue><b>Name</b> </FONT><input type=text name="name" class="ctext">
+        
+        <FONT SIZE=5 color=blue><b>Age</b> </FONT><input type=text name="age" class="ctext">
+<br></br>
+        <FONT SIZE=5 color=blue><b>Otdel(for worker)</b> </FONT><input type=text name="otdel" class="ctext">
+        
+        <FONT SIZE=5 color=blue><b>Position(for worker)</b> </FONT><input type=text name="position" class="ctext">
+        <br></br>
+        <FONT SIZE=5 color=blue><b>Experience(for boss)</b> </FONT><input type=text name="experience" class="ctext">
+        <br></br>
+        <button class="add_worker">Add worker</button>
+        <button class="add_boss">Add boss</button>
+        <br></br>
+        <button class="output">Output list</button>
+        <button class="clear">Clear list </button>
+        <br></br>
+        <button class="write">Write in file</button>
+        <button class="read">Read file</button>
+        
+    </form>
+</body>
+</html>

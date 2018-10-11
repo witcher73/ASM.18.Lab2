@@ -11,6 +11,7 @@ import st19.main
 import st26.main
 import st34.main
 import st41.main
+import st43.main
 import st23.main
 
 #	добавить импорт своего модуля по шаблону
