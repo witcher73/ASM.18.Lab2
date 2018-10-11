@@ -24,6 +24,7 @@ import st32.main
 import st15.main
 import st39.main
 import st40.main
+import st45.main
 
 #	добавить импорт своего модуля по шаблону
 #  ПО АЛФАВИТУ, ПОЖАЛУЙСТА
@@ -50,6 +51,7 @@ MENU = [
     ["[40] Шкуренков", st40.main.main],
     ["[41] Шнякин", st41.main.main],
     #["[43] Шушпанникова", st43.main.main],
+    ["[45] Жаманкин", st45.main.main],    
     ["[46] Соанху", st46.main.main]
     
 
