@@ -9,11 +9,11 @@ class Menu:
 
     def get(self):
         return [
-            ['Добавить сотрудника', self.organization.add_person],
-            ['Добавить руководителя', self.organization.add_director],
-            ['Редактировать организацию', self.organization.edit],
+            ['Добавить нового сотрудника', self.organization.add_person],
+            ['Назначить руководителя', self.organization.add_director],
+            ['Редактировать отдел', self.organization.edit],
             ['Показать общий список', self.organization.show_people],
-            ['Очистить', self.organization.clear_men]
+            ['delete all', self.organization.clear_men]
         ]
 
     # если student_id == None, переходим на начальную страницу

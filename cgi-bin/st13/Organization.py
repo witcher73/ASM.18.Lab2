@@ -3,7 +3,7 @@ import pickle
 import os
 
 from .Form import Form, Menu
-from .Person import Director, Person
+from .Director import Person, Director
 
 
 # Класс-контейнер Организации
@@ -11,14 +11,14 @@ class Organization:
     _FILENAME_STORAGE = os.environ['PATH_TRANSLATED'] +'/cgi-bin/st13/store/storage'
     _FILENAME_UN_STORAGE = os.environ['PATH_TRANSLATED'] +'/cgi-bin/st13/store/organization_storage'
     params = ['name']
-    placeholder = ['Имя']
+    placeholder = ['Отдел']
 
     def __init__(self, selfurl, q):
         self.people = []
         self.url = selfurl
         self.q = q
-        self.name = 'Отдел'
-        self.type = 'отдел'
+        self.name = ''
+        self.type = 'Отдела'
         self.get_name()
         self.get_list()
 
@@ -75,7 +75,7 @@ class Organization:
             print(
                 '<a href={0}?student={1}&act=-1&id={2}>удалить</a>'.format(self.url, self.q.getvalue('student'), index))
             href = '&id={0}'.format(index)
-            if type(man) is Director:
+            if type(man) is Person:
                 href += '&act=0'
             else:
                 href += '&act=1'
