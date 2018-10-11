@@ -220,9 +220,9 @@ class PlanList:
 
     def editPlan(self, query):
         plan = self.findById(query.getvalue("id"))
-        plan.name = query.getvalue("name")
-        plan.federalStudyStandardNumber = int(query.getvalue("federalStudyStandard"))
-        plan.yearBegin = int(query.getvalue("year"))
+        plan.name = query.getvalue("name") if query.getvalue('name') != None else ' '
+        plan.federalStudyStandardNumber = int(query.getvalue("federalStudyStandard")) if query.getvalue('federalStudyStandard') != None else 0
+        plan.yearBegin = int(query.getvalue("year")) if query.getvalue('year') != None else 0
         return plan
     
     def editBasePlan(self, query):
@@ -232,8 +232,8 @@ class PlanList:
 
     def editExtendedPlan(self, query):
         plan = self.editPlan(query)
-        plan.groupId = int(query.getvalue("groupId"))
-        plan.purpose = query.getvalue("purpose")
+        plan.groupId = int(query.getvalue("groupId")) if query.getvalue('groupId') != None else 0
+        plan.purpose = query.getvalue("purpose") if query.getvalue('purpose') != None else ' '
         self.printToFile()
         self.printTable()  
     

@@ -32,8 +32,8 @@ class ExtendedAcademicPlan(BaseAcademicPlan):
       
     def saveProperties(self, elements, query):
         super().saveProperties(elements, query)
-        self.purpose = query.getvalue('purpose')
-        self.groupId = int(query.getvalue('groupId'))
+        self.purpose = query.getvalue('purpose') if query.getvalue('purpose') != None else ' '
+        self.groupId = int(query.getvalue('groupId')) if query.getvalue('groupId') != None else 0
         
     def formTrContent(self, selfUrl, studentId):
         contentTr = super().formTrBaseContent()

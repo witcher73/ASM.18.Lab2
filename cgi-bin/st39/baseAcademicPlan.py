@@ -48,9 +48,9 @@ class BaseAcademicPlan:
     
     def saveProperties(self, elements, query):
         self.id = int(query.getvalue('id'))
-        self.yearBegin = int(query.getvalue('year'))
-        self.name = query.getvalue('name')
-        self.federalStudyStandardNumber = int(query.getvalue('federalStudyStandard'))
+        self.yearBegin = int(query.getvalue('year')) if query.getvalue('year') != None else 0
+        self.name = query.getvalue('name') if (query.getvalue('name')) != None else ' '
+        self.federalStudyStandardNumber = int(query.getvalue('federalStudyStandard')) if query.getvalue('federalStudyStandard') != None else 0
                 
     def formTrBaseContent(self):
         contentTr =  """<tr>
