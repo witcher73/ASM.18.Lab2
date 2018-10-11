@@ -8,11 +8,8 @@ import st00.main
 import st03.main
 import st04.main
 import st06.main
-<<<<<<< HEAD
-import st13.main
-=======
 import st10.main
->>>>>>> 80b841be1d057cddcc21faddea76a4e9ec576247
+import st13.main
 import st19.main
 import st26.main
 import st28.main
@@ -32,7 +29,6 @@ import st39.main
 
 MENU = [
 	["[00] Образец", st00.main.main],
-<<<<<<< HEAD
 	["[03] Васенков", st03.main.main],
     ["[04] Василевский", st04.main.main],
 	["[06] Василюк", st06.main.main],
@@ -47,7 +43,6 @@ MENU = [
         ["[28] Рамазанов", st28.main.main],
         ["[32] Сазонов", st32.main.main],
 	["[15] Казак", st15.main.main],
-=======
    ["[04] Василевский", st04.main.main],
    ["[06] Василюк", st06.main.main],
    ["[08] Винокуров", st08.main.main],
@@ -63,8 +58,6 @@ MENU = [
    ["[41] Шнякин", st41.main.main],
    ["[46] Соанху", st46.main.main]
    
-   
->>>>>>> 80b841be1d057cddcc21faddea76a4e9ec576247
 
 #		добавить пункт меню для вызова своей главной функции по шаблону:
 #		["[<номер по журналу>] <Фамилия>", <ссылка на функцию>],
