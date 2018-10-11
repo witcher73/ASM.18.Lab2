@@ -5,6 +5,7 @@ sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 sys.stdin = codecs.getreader("utf-8")(sys.stdin.detach())
 
 import st00.main
+import st02.main
 import st03.main
 import st04.main
 import st06.main
@@ -32,6 +33,7 @@ import st40.main
 
 MENU = [
 	["[00] Образец", st00.main.main],
+        ["[02] Аметова", st02.main.main],
 	["[03] Васенков", st03.main.main],
     ["[04] Василевский", st04.main.main],
 	["[06] Василюк", st06.main.main],
